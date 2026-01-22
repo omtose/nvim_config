@@ -1,5 +1,8 @@
 return {
     "ellisonleao/gruvbox.nvim",
-    config = true,
     lazy = false,
+	priority = 1000,
+	opts = {
+		contrast = "",
+	}
 }

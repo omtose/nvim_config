@@ -7,7 +7,7 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "catppuccin-macchiato",
+			theme = "auto",
 			disabled_filetypes = {
 			 statusline = { "NvimTree" },
 		 },

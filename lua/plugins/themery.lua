@@ -17,16 +17,50 @@ return {
 					colorscheme = "catppuccin-latte",
 				},
 				{
-					name = "Gruvbox Dark",
-					colorscheme = "gruvbox",
+					name = "Gruvbox Material Dark Soft",
+					colorscheme = "gruvbox-material",
 					before = [[
-					vim.o.background = "dark"
+						vim.g.gruvbox_material_background = "soft"
+						vim.o.background = "dark"
 					]],
 				},
 				{
-					name = "Gruvbox Light",
-					colorscheme = "gruvbox",
+					name = "Gruvbox Material Dark Medium",
+					colorscheme = "gruvbox-material",
 					before = [[
+						vim.g.gruvbox_material_background = "medium"
+						vim.o.background = "dark"
+					]],
+				},
+				{
+					name = "Gruvbox Material Dark Hard",
+					colorscheme = "gruvbox-material",
+					before = [[
+						vim.g.gruvbox_material_background = "hard"
+						vim.o.background = "dark"
+					]],
+				},
+				{
+					name = "Gruvbox Material Light Soft",
+					colorscheme = "gruvbox-material",
+					before = [[
+						vim.g.gruvbox_material_background = "soft"
+						vim.o.background = "light"
+					]],
+				},
+				{
+					name = "Gruvbox Material Light Medium",
+					colorscheme = "gruvbox-material",
+					before = [[
+						vim.g.gruvbox_material_background = "medium"
+						vim.o.background = "light"
+					]],
+				},
+				{
+					name = "Gruvbox Material Light Hard",
+					colorscheme = "gruvbox-material",
+					before = [[
+						vim.g.gruvbox_material_background = "hard"
 						vim.o.background = "light"
 					]],
 				},

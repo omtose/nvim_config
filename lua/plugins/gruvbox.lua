@@ -1,8 +1,10 @@
 return {
-    "ellisonleao/gruvbox.nvim",
-    lazy = false,
+	"sainnhe/gruvbox-material",
+	lazy = false,
 	priority = 1000,
-	opts = {
-		contrast = "",
-	}
+	config = function()
+		-- Default to medium background
+		vim.g.gruvbox_material_background = "medium"
+		vim.g.gruvbox_material_better_performance = 1
+	end,
 }

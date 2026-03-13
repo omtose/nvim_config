@@ -60,31 +60,12 @@ end
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>lua _new_term_toggle()<CR>", {noremap = true, silent = true})
 
--- mason lsp stuff
-require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = {
-		"rust_analyzer",
-		"lua_ls",
-	},
+-- LSP setup (native Neovim 0.11 APIs + mason for server installation)
+vim.lsp.config('*', {
+	capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
-local lspconfig = require('lspconfig')
-local lsp_defaults = lspconfig.util.default_config
-
-lsp_defaults.capabilities = vim.tbl_deep_extend(
-	"force",
-	lsp_defaults.capabilities,
-	require("cmp_nvim_lsp").default_capabilities()
-)
-
-require("mason-lspconfig").setup({
-	function(server_name)
-		lspconfig[server_name].setup({
-			capabilities = lsp_defaults.capabilities,
-		})
-	end,
-})
+vim.lsp.enable({ 'lua_ls', 'rust_analyzer' })
 
 
 vim.api.nvim_create_autocmd("LspAttach", {

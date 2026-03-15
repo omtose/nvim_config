@@ -17,6 +17,13 @@ vim.opt.breakindent = true
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "100"
 vim.g.rust_recommended_style = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.undofile = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.scrolloff = 8
+vim.opt.cursorline = true
 
 -- ===================== --
 -- ==     Plugins     == --

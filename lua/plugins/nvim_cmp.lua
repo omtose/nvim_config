@@ -35,7 +35,14 @@ return {
 				}
 			),
 			window = {
-				documentation = cmp.config.window.bordered()
+				completion = {
+					border = "rounded",
+					winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+				},
+				documentation = {
+					border = "rounded",
+					winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+				},
 			},
 			formatting = {
 				fields = { "menu", "abbr", "kind", },
@@ -103,15 +110,16 @@ return {
 			},
 		})
 
-		cmp.setup.cmdline('/', {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = {
-				{ name = "buffer" },
+		local cmdline_window = {
+			completion = {
+				border = "none",
+				winhighlight = "Normal:Pmenu,CursorLine:PmenuSel,Search:None",
 			},
-		})
+		}
 
 		cmp.setup.cmdline(':', {
 			mapping = cmp.mapping.preset.cmdline(),
+			window = cmdline_window,
 			sources = cmp.config.sources(
 				{ { name = "path" } },
 				{ { name = "cmdline" } }

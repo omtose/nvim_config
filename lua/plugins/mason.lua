@@ -1,5 +1,8 @@
 return {
 	"williamboman/mason.nvim",
+	dependencies = {
+		"neovim/nvim-lspconfig",
+	},
 	opts = {
 		ensure_installed = {
 			"rust-analyzer",
@@ -15,6 +18,9 @@ return {
 	config = function(_, opts)
 		require("mason").setup(opts)
 
+		-- Add mason bin to PATH so Neovim can find installed servers
+		vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin:" .. vim.env.PATH
+
 		-- Auto-install listed servers if missing
 		local mr = require("mason-registry")
 		for _, tool in ipairs(opts.ensure_installed or {}) do
@@ -24,7 +30,7 @@ return {
 			end
 		end
 
-		-- LSP setup (native Neovim 0.11 APIs)
+		-- Global LSP capabilities (nvim-lspconfig provides server defaults)
 		vim.lsp.config('*', {
 			capabilities = require('cmp_nvim_lsp').default_capabilities(),
 		})
@@ -35,7 +41,6 @@ return {
 			'gopls',
 			'ts_ls',
 			'eslint',
-			'postgres_lsp',
 			'gleam',
 			'angularls',
 		})

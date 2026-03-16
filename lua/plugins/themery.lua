@@ -5,6 +5,10 @@ return {
 		require("themery").setup({
 			themes = {
 				{
+					name = "Custom Rice",
+					colorscheme = "rice",
+				},
+				{
 					name = "Catppuccin Mocha",
 					colorscheme = "catppuccin-mocha",
 				},

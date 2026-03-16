@@ -1,23 +1,26 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "main",
+	branch = "master",
 	build = ":TSUpdate",
-	opts = {
-		ensure_installed = {
-			"bash",
-			"gleam",
-			"go",
-			"javascript",
-			"lua",
-			"markdown",
-			"markdown_inline",
-			"python",
-			"rust",
-			"toml",
-			"typescript",
-			"vim",
-			"vimdoc",
-			"yaml",
-		},
-	},
+	config = function()
+		require("nvim-treesitter.configs").setup({
+			ensure_installed = {
+				"bash",
+				"gleam",
+				"go",
+				"javascript",
+				"lua",
+				"markdown",
+				"markdown_inline",
+				"python",
+				"rust",
+				"toml",
+				"typescript",
+				"vim",
+				"vimdoc",
+				"yaml",
+			},
+			highlight = { enable = true },
+		})
+	end,
 }

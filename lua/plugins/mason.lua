@@ -52,6 +52,7 @@ return {
 				vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = ev.buf, desc = "Go to declaration" })
 				vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, { buffer = ev.buf, desc = "Signature help" })
 				vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { buffer = ev.buf, desc = "Show diagnostic float" })
+			vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { buffer = ev.buf, desc = "Code action" })
 			end,
 		})
 	end,

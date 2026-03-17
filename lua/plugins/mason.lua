@@ -13,6 +13,7 @@ return {
 			"postgres-language-server",
 			"prettier",
 			"angular-language-server",
+			"marksman",
 		},
 	},
 	config = function(_, opts)
@@ -44,6 +45,7 @@ return {
 			'gleam',
 			'angularls',
 			'postgres_lsp',
+			'marksman',
 		})
 
 		vim.api.nvim_create_autocmd("LspAttach", {

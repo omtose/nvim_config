@@ -6,7 +6,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	keys = {
-		{ "<leader>m", "<cmd>RenderMarkdown toggle<cr>", desc = "Toggle markdown preview" },
+		{ "<leader>m", "<cmd>RenderMarkdown buf_toggle<cr>", desc = "Toggle markdown preview" },
 		{ "<leader>mp", "<cmd>RenderMarkdown preview<cr>", desc = "Markdown split preview" },
 	},
 	opts = {

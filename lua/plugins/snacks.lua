@@ -4,9 +4,8 @@ return {
 	lazy = false,
 	opts = {
 		bigfile = { enabled = true },
-		indent = { enabled = true },
+		indent = { enabled = true, animate = { enabled = false } },
 		input = { enabled = true },
 		quickfile = { enabled = true },
-		words = { enabled = true },
 	},
 }

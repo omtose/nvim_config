@@ -18,7 +18,7 @@ return {
 			markdown = { "prettier" },
 			htmlangular = { "prettier" },
 		},
-		format_on_save = {
+		format_after_save = {
 			timeout_ms = 500,
 			lsp_format = "fallback",
 		},

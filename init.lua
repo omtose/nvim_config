@@ -25,6 +25,7 @@ vim.opt.splitbelow = true
 vim.opt.scrolloff = 8
 vim.opt.cursorline = true
 vim.opt.pumheight = 10
+vim.o.winborder = "rounded"
 
 -- ===================== --
 -- ==     Plugins     == --
